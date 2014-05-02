@@ -58,7 +58,7 @@ def windows(indices, offset, X):
   X = np.atleast_2d(X)
   p, n = X.shape
   ii = np.atleast_1d(indices)
-  begin, end = offset
+  begin, end = offset.astype(int)
 
   ii = ii[np.logical_and(ii + begin >= 0, ii + end < n)]
 
